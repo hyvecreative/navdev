@@ -35,50 +35,6 @@ if (!current_user_can('administrator') && !is_admin()) {
 
 ********************************/
 
-if ( function_exists( 'wp_nav_menu' ) ){
-
-	if (function_exists('add_theme_support')) {
-
-		add_theme_support('nav-menus');
-
-		add_action( 'init', 'register_my_menus' );
-
-		function register_my_menus() {
-
-			register_nav_menus(
-
-				array(
-
-					'main-menu' => __( 'Main Menu' ),
-	  				'footer-menu' => __( 'Footer Menu' )
-
-				)
-
-			);
-
-		}
-
-	}
-
-}
-
-
-
-/* CallBack functions for menus in case of earlier than 3.0 Wordpress version or if no menu is set yet*/
-
-
-
-function primarymenu(){ ?>
-
-			<div id="topMenu">
-
-				You need to set up the menu from Wordpress admin.
-
-			</div>
-
-<?php }
-
-
 
 /*******************************
 
@@ -185,6 +141,56 @@ function fix_svg() {
 }
 add_action( 'admin_head', 'fix_svg' );
 
+/*******************************
+
+ MENUS SUPPORT
+
+********************************/
+
+if ( function_exists( 'wp_nav_menu' ) ){
+
+	if (function_exists('add_theme_support')) {
+
+		add_theme_support('nav-menus');
+
+		add_action( 'init', 'register_my_menus' );
+
+		function register_my_menus() {
+
+			register_nav_menus(
+
+				array(
+
+					'main-menu' => __( 'Main Menu' ),
+	  				'footer-menu' => __( 'Footer Menu' )
+
+				)
+
+			);
+
+		}
+
+	}
+
+}
+
+
+/***********************************
+
+Menu
+
+************************************/
+
+
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'intelmain' ),
+) );
 
 /*******************************
 

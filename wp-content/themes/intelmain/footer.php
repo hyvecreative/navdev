@@ -76,29 +76,6 @@
 </a>
 
 <?= wp_footer() ?> 
-    
- <script>
-(function($){
-      jQuery('.a-menu').flexMenu({
-        responsivePattern: 'off-canvas'
-      });
-    })(jQuery);   
-</script>
-
-<script>	
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-      
-      // Smooth scroll to #results 
-      var target = $(this.hash);
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function() {});
-
-    });
-});
-</script>
 
 </body>
 
