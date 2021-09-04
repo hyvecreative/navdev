@@ -1672,10 +1672,11 @@ figure {
   .feature-image .hero-text.text-pop {
     bottom: -50px;
     padding: 0;
-    left: 15px; }
+    padding-left: 15px; }
     @media (min-width: 576px) {
       .feature-image .hero-text.text-pop {
-        left: 0px; } }
+        left: 0px;
+        padding-left: 0; } }
     .feature-image .hero-text.text-pop h1 {
       font-size: 1.5rem;
       font-weight: 600;
