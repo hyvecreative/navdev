@@ -71,14 +71,14 @@
  <div id="wrapper" class="wrapperhome">
 
 <!-- begin header -->
-<div id="header">
+<div id="header" class="fixed-top">
 
 <div class="container-fluid">
 	<div class="container">
 
 		
 		
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light" role="navigation">
+		<nav class="navbar navbar-expand-lg navbar-light" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'navdev' ); ?>" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
       <svg width="100" height="100" viewBox="0 0 100 100">
