@@ -1,0 +1,76 @@
+.btn {
+	display:inline-block;
+	color: $blue_5;
+	min-width: 120px;
+	height: auto;
+	line-height: 20px;
+	font-size: 1rem;
+	border: solid 2px $blue_5;
+	border-radius: 6px;
+	background-color: transparent;
+	text-decoration: none;
+	text-align: center;
+	font-weight:600;
+	margin: 1% auto 0;
+	padding: 8px 10px;
+	transition: transform .2s;
+	
+	&:hover {
+	color: $blue_5; background-color: rgba($blue_5, .3); -ms-transform: scale(1.1); transform: scale(1.1);
+	}
+		
+	&:active {
+	color: $blue_5; background-color: $yellow_5;
+	}
+	
+		&-1 {background: $red_5;
+			&:hover {color: $white_5; background: $red_10;}
+			}
+		&-2 {background: $purple_10;
+			&:hover {color: $white_5; background: $purple_15;}
+			}
+		&-3 {background: $crimson_10;
+			&:hover {background: $crimson_15;}
+			}
+		&-4 {background: $teal_10;
+			&:hover {color: $white_5; background: $teal_15;}
+			}
+	
+	&.btn-rev { color: $white_5; background: transparent; padding: 8px 14px; border: solid 2px $white_5;
+		&:hover {background: rgba($white_5, .2); color: $white_5;}
+		&-1 {color: $red_5; border: solid 2px $red_5;
+			&:hover {color: $white_5; background: $red_5;}
+			}
+		&-2 {color: $purple_10; border: solid 2px $purple_10; 
+			&:hover {color: $white_5; background: $purple_10;}
+			}
+		&-3 {color: $crimson_10; border: solid 2px $crimson_10;
+			&:hover {color: $white_5; background: $crimson_10;}
+			}
+		&-4 {color: $teal_10; border: solid 2px $teal_10;
+			&:hover {color: $white_5; background: $teal_10;}
+			}
+	}
+
+	&.btn-hero { color: $white_5; font-size: 1.1rem; background: transparent; padding: 12px 16px; border: solid 2px $white_5; margin-top: 0;
+		&:hover {color: $white_5; background: rgba($blue_5, .2);}
+	}
+}
+
+@media screen and (min-width: 420px) {
+}
+
+
+/* Font Awesome */
+.scroll-yellow {
+	i {color: $yellow_5}
+}
+
+/* Gutenberk button block */
+
+.wrapperhome {
+		 .wp-block-button__link {
+			font-size: 1rem;
+			padding: 8px 10px;
+		}
+	}
